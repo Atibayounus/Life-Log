@@ -1,7 +1,7 @@
 import { useState } from "react";
 import api from "../api/axios.js";
 
-const COLORS = ["#3b82f6", "#ef4444", "#22c55e", "#f59e0b", "#a855f7", "#ec4899"];
+const COLORS = ["#3b82f6", "#ef4444", "#22c55e", "#f59e0b", "#a855f7", "#0ea5e9"];
 
 export default function AddHabitModal({ onClose, onCreated }) {
   const [name, setName] = useState("");
@@ -30,61 +30,63 @@ export default function AddHabitModal({ onClose, onCreated }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-slate-900/40 flex items-center justify-center z-50 p-4">
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-lg shadow-lg p-6 w-full max-w-sm"
+        className="bg-white rounded-lg border border-slate-200 p-6 w-full max-w-sm"
       >
-        <h2 className="text-lg font-bold mb-4">New Habit</h2>
-        {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
+        <h2 className="text-base font-semibold text-slate-900 mb-5">New habit</h2>
+        {error && <p className="text-red-600 text-sm mb-4">{error}</p>}
 
-        <label className="text-sm text-gray-600">Habit name</label>
+        <label className="text-sm text-slate-600 block mb-1">Name</label>
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="e.g. Drink water"
-          className="w-full border p-2 rounded mt-1 mb-4"
+          className="w-full border border-slate-300 rounded-md p-2 text-sm mb-4 focus:outline-none focus:ring-2 focus:ring-slate-900"
           required
         />
 
-        <label className="text-sm text-gray-600">Color</label>
-        <div className="flex gap-2 mt-1 mb-4">
+        <label className="text-sm text-slate-600 block mb-1">Color</label>
+        <div className="flex gap-2 mb-4">
           {COLORS.map((c) => (
             <button
               type="button"
               key={c}
               onClick={() => setColor(c)}
-              className={`w-7 h-7 rounded-full border-2 ${
-                color === c ? "border-gray-800" : "border-transparent"
+              className={`w-6 h-6 rounded-full ${
+                color === c ? "ring-2 ring-offset-2 ring-slate-900" : ""
               }`}
               style={{ backgroundColor: c }}
             />
           ))}
         </div>
 
-        <label className="text-sm text-gray-600">Reminder time (optional)</label>
+        <label className="text-sm text-slate-600 block mb-1">
+          Reminder time <span className="text-slate-400">(optional)</span>
+        </label>
         <input
           type="time"
           value={reminderTime}
           onChange={(e) => setReminderTime(e.target.value)}
-          className="w-full border p-2 rounded mt-1 mb-6"
+          className="w-full border border-slate-300 rounded-md p-2 text-sm mb-6 focus:outline-none focus:ring-2 focus:ring-slate-900"
         />
 
         <div className="flex gap-3">
           <button
             type="button"
             onClick={onClose}
-            className="flex-1 border p-2 rounded hover:bg-gray-50"
+            className="flex-1 border border-slate-300 text-slate-700 text-sm p-2 rounded-md hover:bg-slate-50 transition-colors"
           >
             Cancel
           </button>
           <button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+            className="flex-1 bg-slate-900 text-white text-sm p-2 rounded-md hover:bg-slate-800 transition-colors"
           >
-            {loading ? "Saving..." : "Add Habit"}
+            {loading ? "Saving..." : "Add habit"}
           </button>
         </div>
       </form>

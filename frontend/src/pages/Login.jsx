@@ -21,38 +21,44 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm"
+        className="bg-white border border-slate-200 rounded-lg p-8 w-full max-w-sm"
       >
-        <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
-        {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+        <h1 className="text-xl font-semibold text-slate-900 mb-1">Welcome back</h1>
+        <p className="text-sm text-slate-500 mb-6">Log in to your account</p>
+
+        {error && <p className="text-red-600 text-sm mb-4">{error}</p>}
+
+        <label className="text-sm text-slate-600 block mb-1">Email</label>
         <input
           type="email"
-          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full border p-2 rounded mb-3"
+          className="w-full border border-slate-300 rounded-md p-2 text-sm mb-4 focus:outline-none focus:ring-2 focus:ring-slate-900"
           required
         />
+
+        <label className="text-sm text-slate-600 block mb-1">Password</label>
         <input
           type="password"
-          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full border p-2 rounded mb-4"
+          className="w-full border border-slate-300 rounded-md p-2 text-sm mb-6 focus:outline-none focus:ring-2 focus:ring-slate-900"
           required
         />
+
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+          className="w-full bg-slate-900 text-white text-sm p-2.5 rounded-md hover:bg-slate-800 transition-colors"
         >
-          Login
+          Log in
         </button>
-        <p className="text-sm text-center mt-4">
+
+        <p className="text-sm text-center text-slate-500 mt-5">
           Don't have an account?{" "}
-          <Link to="/register" className="text-blue-600">
+          <Link to="/register" className="text-slate-900 font-medium hover:underline">
             Register
           </Link>
         </p>

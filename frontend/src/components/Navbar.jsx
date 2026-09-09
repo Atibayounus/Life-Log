@@ -4,15 +4,17 @@ export default function Navbar() {
   const { user, logout } = useAuth();
 
   return (
-    <nav className="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold text-blue-600">🔥 Habit Tracker</h1>
+    <nav className="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+      <h1 className="text-lg font-semibold text-slate-900 tracking-tight">
+        Habit Tracker
+      </h1>
       <div className="flex items-center gap-4">
-        <span className="text-gray-700">Hi, {user?.name}</span>
+        <span className="text-sm text-slate-500">{user?.name}</span>
         <button
           onClick={logout}
-          className="text-sm bg-gray-100 px-3 py-1 rounded hover:bg-gray-200"
+          className="text-sm text-slate-600 border border-slate-300 px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors"
         >
-          Logout
+          Log out
         </button>
       </div>
     </nav>

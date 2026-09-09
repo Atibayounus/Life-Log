@@ -24,30 +24,33 @@ export default function HabitCard({ habit, onUpdate }) {
   };
 
   return (
-    <div
-      className="bg-white rounded-lg shadow-sm p-5 border-l-4"
-      style={{ borderLeftColor: habit.color || "#3b82f6" }}
-    >
-      <div className="flex justify-between items-start">
-        <div>
-          <h3 className="font-semibold text-lg">{habit.name}</h3>
-          <p className="text-sm text-gray-500">
-            🔥 {habit.streak || 0} day streak · {habit.points || 0} pts
-          </p>
+    <div className="bg-white rounded-lg border border-slate-200 p-5">
+      <div className="flex justify-between items-start gap-4">
+        <div className="flex items-center gap-3">
+          <span
+            className="w-2.5 h-2.5 rounded-full mt-1 flex-shrink-0"
+            style={{ backgroundColor: habit.color || "#3b82f6" }}
+          />
+          <div>
+            <h3 className="font-medium text-slate-900">{habit.name}</h3>
+            <p className="text-sm text-slate-500 mt-0.5">
+              {habit.streak || 0}-day streak &middot; {habit.points || 0} points
+            </p>
+          </div>
         </div>
         <button
           onClick={handleCheckIn}
           disabled={alreadyCheckedInToday || loading}
-          className={`text-sm px-4 py-2 rounded-lg font-medium ${
+          className={`text-sm px-4 py-2 rounded-md font-medium whitespace-nowrap transition-colors ${
             alreadyCheckedInToday
-              ? "bg-green-100 text-green-700 cursor-not-allowed"
-              : "bg-blue-600 text-white hover:bg-blue-700"
+              ? "bg-slate-100 text-slate-400 cursor-not-allowed"
+              : "bg-slate-900 text-white hover:bg-slate-800"
           }`}
         >
-          {alreadyCheckedInToday ? "Checked In ✓" : loading ? "..." : "Check In"}
+          {alreadyCheckedInToday ? "Checked in" : loading ? "Saving..." : "Check in"}
         </button>
       </div>
-      {error && <p className="text-red-500 text-xs mt-2">{error}</p>}
+      {error && <p className="text-red-600 text-xs mt-2">{error}</p>}
       <BadgeShelf streak={habit.streak || 0} />
     </div>
   );

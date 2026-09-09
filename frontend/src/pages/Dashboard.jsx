@@ -36,27 +36,35 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50">
       <Navbar />
-      <div className="max-w-3xl mx-auto p-6">
+      <div className="max-w-2xl mx-auto p-6">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-xl font-bold">Your Habits</h2>
+          <h2 className="text-base font-semibold text-slate-900">Your habits</h2>
           <button
             onClick={() => setShowModal(true)}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+            className="bg-slate-900 text-white text-sm px-4 py-2 rounded-md hover:bg-slate-800 transition-colors"
           >
-            + Add Habit
+            Add habit
           </button>
         </div>
 
-        {loading && <p className="text-gray-500">Loading...</p>}
-        {error && <p className="text-red-500">{error}</p>}
+        {loading && <p className="text-sm text-slate-500">Loading...</p>}
+        {error && <p className="text-sm text-red-600">{error}</p>}
 
         {!loading && habits.length === 0 && (
-          <p className="text-gray-500">No habits yet — add your first one!</p>
+          <div className="text-center py-16 border border-dashed border-slate-300 rounded-lg">
+            <p className="text-sm text-slate-500">No habits yet.</p>
+            <button
+              onClick={() => setShowModal(true)}
+              className="text-sm text-slate-900 font-medium hover:underline mt-1"
+            >
+              Add your first one
+            </button>
+          </div>
         )}
 
-        <div className="grid gap-4">
+        <div className="grid gap-3">
           {habits.map((habit) => (
             <HabitCard key={habit._id} habit={habit} onUpdate={handleHabitUpdate} />
           ))}
