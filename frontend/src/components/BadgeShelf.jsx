@@ -17,8 +17,8 @@ export default function BadgeShelf({ streak }) {
             title={`${badge.days}-day streak`}
             className={`text-xs px-2.5 py-1 rounded-full border ${
               earned
-                ? "border-slate-900 bg-slate-900 text-white"
-                : "border-slate-200 text-slate-400"
+                ? "border-[#F8B4D9] bg-[#F8B4D9] text-pink-900"
+                : "border-pink-100 text-pink-300"
             }`}
           >
             {badge.label}
