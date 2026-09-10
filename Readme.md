@@ -25,6 +25,7 @@
 * 🌙 **Modern Interface** — Dark UI with neon accents
 * ⚡ **REST API** — Express-based backend API
 * 🗄️ **MongoDB** — Persistent data storage using Mongoose
+* ✅ functionality- send email reminders
 
 ---
 ## Screenshots
