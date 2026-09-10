@@ -16,6 +16,17 @@
   <strong>“Small steps, kept daily.”</strong>
 </p>
 
+## ✨ Features
+
+* 🔐 **Authentication** — JWT-based login and registration with protected routes
+* ✅ **Habit Dashboard** — Add, view, and update habits
+* 📊 **Progress Tracking** — See daily completion counts and progress at a glance
+* 📱 **Responsive UI** — Works across desktop and mobile screens
+* 🌙 **Modern Interface** — Dark UI with neon accents
+* ⚡ **REST API** — Express-based backend API
+* 🗄️ **MongoDB** — Persistent data storage using Mongoose
+
+---
 ## Screenshots
 
 ### Login
@@ -35,18 +46,6 @@
 
 ### Badges
 ![Badges](sshots/0.png)
-
-## ✨ Features
-
-* 🔐 **Authentication** — JWT-based login and registration with protected routes
-* ✅ **Habit Dashboard** — Add, view, and update habits
-* 📊 **Progress Tracking** — See daily completion counts and progress at a glance
-* 📱 **Responsive UI** — Works across desktop and mobile screens
-* 🌙 **Modern Interface** — Dark UI with neon accents
-* ⚡ **REST API** — Express-based backend API
-* 🗄️ **MongoDB** — Persistent data storage using Mongoose
-
----
 
 ## 🛠️ Tech Stack
 
