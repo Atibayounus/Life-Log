@@ -18,21 +18,23 @@
 
 ## Screenshots
 
-<table>
-  <tr>
-    <td align="center"><img src="sshots/0.png" width="260"/><br/><sub>Login</sub></td>
-    <td align="center"><img src="sshots/1.png" width="260"/><br/><sub>Register</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="sshots/2.png" width="260"/><br/><sub>Dashboard</sub></td>
-    <td align="center"><img src="sshots/3.png" width="260"/><br/><sub>Add habit</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="sshots/4.png" width="260"/><br/><sub>Habit check-in</sub></td>
-    <td align="center"><img src="sshots/5.png" width="260"/><br/><sub>Badges</sub></td>
-  </tr>
-</table>
+### Login
+![Login](sshots/1.png)
 
+### Register
+![Register](sshots/2.png)
+
+### Dashboard
+![Dashboard](sshots/3.png)
+
+### Add habit
+![Add habit](sshots/4.png)
+
+### Habit check-in
+![Habit check-in](sshots/5.png)
+
+### Badges
+![Badges](sshots/0.png)
 
 ## ✨ Features
 
