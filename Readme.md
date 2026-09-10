@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4CAF50,100:FDD835&height=170&section=header" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4CAF50,100:FDD835&height=200&section=header&text=Life%20Log&fontSize=60&fontColor=ffffff&fontAlignY=40&animation=fadeIn&desc=Small%20steps,%20kept%20daily.&descAlignY=60&descSize=18&descColor=ffffff" width="100%">
 </p>
 
-<h1 align="center">Life Log</h1>
+
 
 <p align="center">
   A full-stack habit tracker built with the MERN stack.
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <strong>“Small steps, kept daily.”</strong>
+  <strong>"Small steps, kept daily."</strong>
 </p>
 
 ## ✨ Features
@@ -47,6 +47,11 @@
 
 ### Badges
 ![Badges](sshots/0.png)
+
+
+### Video Demo
+
+https://github.com/user-attachments/assets/b9b71ae3-8366-4a4d-b509-b8377c0dd049
 
 ## 🛠️ Tech Stack
 
