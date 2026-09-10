@@ -1,4 +1,3 @@
-// AddHabitModal.jsx
 import { useState, useEffect, useRef } from "react";
 import api from "../api/axios.js";
 
