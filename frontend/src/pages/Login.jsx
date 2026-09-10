@@ -26,25 +26,25 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#F6FBF8]">
+    <div className="min-h-screen flex bg-[#F3F8F4]">
       {/* Hero panel — hidden on small screens */}
-      <div className="hidden lg:flex w-[46%] bg-[#1F3B3B] relative overflow-hidden flex-col justify-between p-12">
+      <div className="hidden lg:flex w-[46%] bg-[#16302B] relative overflow-hidden flex-col justify-between p-12">
         <DotGrid />
 
         <div className="flex items-center gap-2 relative">
-          <span className="w-2 h-2 rounded-full bg-[#4FC3A1]" />
-          <span className="w-2 h-2 rounded-full bg-[#7EC8E3]" />
-          <span className="w-2 h-2 rounded-full bg-[#F5D76E]" />
+          <span className="w-2 h-2 rounded-full bg-[#4FA184]" />
+          <span className="w-2 h-2 rounded-full bg-[#8FC7AA]" />
+          <span className="w-2 h-2 rounded-full bg-[#C9E4D3]" />
         </div>
 
         <div className="relative">
           <p
-            className="text-[#EAFBF5] text-[34px] leading-[1.2] max-w-sm"
+            className="text-[#E7F4ED] text-[34px] leading-[1.2] max-w-sm"
             style={{ fontFamily: "'Fraunces', Georgia, serif" }}
           >
             Lifelog , Small steps, kept daily.
           </p>
-          <p className="text-[#8FB6AF] text-[14px] mt-3 max-w-xs">
+          <p className="text-[#c2c43b] text-[14px] mt-3 max-w-xs">
             Every habit here is just a streak of days you didn't skip.
           </p>
         </div>
@@ -54,17 +54,17 @@ export default function Login() {
       <div className="flex-1 flex items-center justify-center px-6 py-12">
         <form onSubmit={handleSubmit} className="w-full max-w-sm">
           <h1
-            className="text-[26px] text-[#1F3B3B] mb-1.5"
+            className="text-[26px] text-[#16302B] mb-1.5"
             style={{ fontFamily: "'Fraunces', Georgia, serif" }}
           >
             Welcome back
           </h1>
-          <p className="text-[14px] text-[#5E8C86] mb-7">Log in to keep your streaks going.</p>
+          <p className="text-[14px] text-[#5E8C7E] mb-7">Log in to keep your streaks going.</p>
 
           {error && (
             <p
               role="alert"
-              className="flex items-center gap-2 text-[#B5533A] bg-[#FCEEE8] border border-[#F3D9CB] rounded-xl px-3 py-2 text-[13px] mb-5"
+              className="flex items-center gap-2 text-rose-700 bg-rose-50 border border-rose-100 rounded-xl px-3 py-2 text-[13px] mb-5"
             >
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="shrink-0">
                 <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.3" />
@@ -74,7 +74,7 @@ export default function Login() {
             </p>
           )}
 
-          <label htmlFor="login-email" className="text-[13px] text-[#5E8C86] block mb-1.5">
+          <label htmlFor="login-email" className="text-[13px] text-[#5E8C7E] block mb-1.5">
             Email
           </label>
           <input
@@ -83,11 +83,11 @@ export default function Login() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="email"
-            className="w-full border border-[#D8EEE6] bg-white text-[#1F3B3B] rounded-xl px-3 py-2.5 text-[14px] mb-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FC3A1] focus-visible:border-transparent transition-shadow"
+            className="w-full border border-[#CFE8DA] bg-white text-[#16302B] rounded-xl px-3 py-2.5 text-[14px] mb-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F7D5C] focus-visible:border-transparent transition-shadow"
             required
           />
 
-          <label htmlFor="login-password" className="text-[13px] text-[#5E8C86] block mb-1.5">
+          <label htmlFor="login-password" className="text-[13px] text-[#5E8C7E] block mb-1.5">
             Password
           </label>
           <div className="relative mb-6">
@@ -97,14 +97,14 @@ export default function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               autoComplete="current-password"
-              className="w-full border border-[#D8EEE6] bg-white text-[#1F3B3B] rounded-xl px-3 py-2.5 pr-10 text-[14px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FC3A1] focus-visible:border-transparent transition-shadow"
+              className="w-full border border-[#CFE8DA] bg-white text-[#16302B] rounded-xl px-3 py-2.5 pr-10 text-[14px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F7D5C] focus-visible:border-transparent transition-shadow"
               required
             />
             <button
               type="button"
               onClick={() => setShowPassword((v) => !v)}
               aria-label={showPassword ? "Hide password" : "Show password"}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#9BC2BC] hover:text-[#5E8C86] p-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FC3A1] transition-colors"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#9BC2AE] hover:text-[#5E8C7E] p-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F7D5C] transition-colors"
             >
               {showPassword ? (
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -122,7 +122,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#3AAE8D] text-white text-[14px] py-2.5 rounded-full hover:bg-[#34A084] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FC3A1] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F6FBF8]"
+            className="w-full bg-[#2F7D5C] text-white text-[14px] py-2.5 rounded-full hover:bg-[#24634A] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F7D5C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F3F8F4]"
           >
             {loading ? (
               <>
@@ -137,9 +137,9 @@ export default function Login() {
             )}
           </button>
 
-          <p className="text-[14px] text-center text-[#5E8C86] mt-6">
+          <p className="text-[14px] text-center text-[#5E8C7E] mt-6">
             Don't have an account?{" "}
-            <Link to="/register" className="text-[#3AAE8D] font-medium hover:underline">
+            <Link to="/register" className="text-[#2F7D5C] font-medium hover:underline">
               Register
             </Link>
           </p>
@@ -162,7 +162,7 @@ function DotGrid() {
           cx={c * 34 + 20}
           cy={r * 34 + 20}
           r="2.5"
-          fill="#EAFBF5"
+          fill="#E7F4ED"
           opacity={(r + c) % 5 === 0 ? 0.22 : 0.07}
         />
       );

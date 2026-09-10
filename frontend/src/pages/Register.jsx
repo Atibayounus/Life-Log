@@ -23,57 +23,57 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F4FAF9] px-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#F3F8F4] px-4">
       <form
         onSubmit={handleSubmit}
-        className="bg-[#EAFBF5] border border-[#CDEEE3] rounded-2xl p-8 w-full max-w-sm shadow-sm"
+        className="bg-white border border-[#CFE8DA] rounded-2xl p-8 w-full max-w-sm shadow-[0_2px_20px_-4px_rgba(22,48,43,0.08)]"
       >
-        <h1 className="text-xl font-semibold text-[#1F3B3B] mb-1">Create account</h1>
-        <p className="text-sm text-[#5E8C86] mb-6">Start tracking your habits</p>
+        <h1 className="font-serif text-2xl text-[#16302B] mb-1">Create account</h1>
+        <p className="text-sm text-[#5E8C7E] mb-6">Start tracking your habits</p>
 
         {error && (
-          <p className="text-rose-500 bg-rose-50 border border-rose-100 rounded-md px-3 py-2 text-sm mb-4">
+          <p className="text-rose-700 bg-rose-50 border border-rose-100 rounded-lg px-3 py-2 text-sm mb-4">
             {error}
           </p>
         )}
 
-        <label className="text-sm text-[#5E8C86] block mb-1">Name</label>
+        <label className="text-sm text-[#3F6355] font-medium block mb-1">Name</label>
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full border border-[#CDEEE3] bg-white text-[#1F3B3B] rounded-md p-2 text-sm mb-4 focus:outline-none focus:ring-2 focus:ring-[#4FC3A1]"
+          className="w-full border border-[#CFE8DA] bg-[#F8FCFA] text-[#16302B] rounded-lg p-2.5 text-sm mb-4 outline-none focus:ring-2 focus:ring-[#2F7D5C]/40 focus:border-[#2F7D5C] transition-colors"
           required
         />
 
-        <label className="text-sm text-[#5E8C86] block mb-1">Email</label>
+        <label className="text-sm text-[#3F6355] font-medium block mb-1">Email</label>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full border border-[#CDEEE3] bg-white text-[#1F3B3B] rounded-md p-2 text-sm mb-4 focus:outline-none focus:ring-2 focus:ring-[#4FC3A1]"
+          className="w-full border border-[#CFE8DA] bg-[#F8FCFA] text-[#16302B] rounded-lg p-2.5 text-sm mb-4 outline-none focus:ring-2 focus:ring-[#2F7D5C]/40 focus:border-[#2F7D5C] transition-colors"
           required
         />
 
-        <label className="text-sm text-[#5E8C86] block mb-1">Password</label>
+        <label className="text-sm text-[#3F6355] font-medium block mb-1">Password</label>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full border border-[#CDEEE3] bg-white text-[#1F3B3B] rounded-md p-2 text-sm mb-6 focus:outline-none focus:ring-2 focus:ring-[#4FC3A1]"
+          className="w-full border border-[#CFE8DA] bg-[#F8FCFA] text-[#16302B] rounded-lg p-2.5 text-sm mb-6 outline-none focus:ring-2 focus:ring-[#2F7D5C]/40 focus:border-[#2F7D5C] transition-colors"
           required
         />
 
         <button
           type="submit"
-          className="w-full bg-[#4FC3A1] text-white text-sm p-2.5 rounded-md hover:bg-[#3AAE8D] transition-colors"
+          className="w-full bg-[#2F7D5C] text-white text-sm font-medium p-2.5 rounded-lg hover:bg-[#24634A] active:scale-[0.98] transition-all"
         >
           Register
         </button>
 
-        <p className="text-sm text-center text-[#5E8C86] mt-5">
+        <p className="text-sm text-center text-[#5E8C7E] mt-5">
           Already have an account?{" "}
-          <Link to="/login" className="text-[#3AAE8D] font-medium hover:underline">
+          <Link to="/login" className="text-[#2F7D5C] font-medium hover:underline">
             Log in
           </Link>
         </p>

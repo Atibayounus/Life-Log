@@ -61,7 +61,7 @@ export default function AddHabitModal({ onClose, onCreated }) {
 
   return (
     <div
-      className="fixed inset-0 bg-[#0F2523]/35 backdrop-blur-[2px] flex items-center justify-center z-50 p-4 animate-[habit-backdrop_180ms_ease-out]"
+      className="fixed inset-0 bg-[#16302B]/35 backdrop-blur-[2px] flex items-center justify-center z-50 p-4 animate-[habit-backdrop_180ms_ease-out]"
       onClick={onClose}
     >
       <style>{`
@@ -72,12 +72,12 @@ export default function AddHabitModal({ onClose, onCreated }) {
       <form
         onSubmit={handleSubmit}
         onClick={(e) => e.stopPropagation()}
-        className="bg-[#F6FBF8] rounded-[28px] border border-[#D8EEE6] p-7 w-full max-w-sm shadow-[0_18px_40px_-16px_rgba(31,59,59,0.28)] animate-[habit-pop_220ms_cubic-bezier(0.16,1,0.3,1)]"
+        className="bg-white rounded-[28px] border border-[#CFE8DA] p-7 w-full max-w-sm shadow-[0_18px_40px_-16px_rgba(22,48,43,0.28)] animate-[habit-pop_220ms_cubic-bezier(0.16,1,0.3,1)]"
       >
         {/* Header */}
         <div className="flex items-start justify-between mb-6">
           <h2
-            className="text-[19px] leading-tight text-[#1F3B3B] font-medium"
+            className="text-[19px] leading-tight text-[#16302B] font-medium"
             style={{ fontFamily: "'Fraunces', Georgia, serif" }}
           >
             New habit
@@ -86,7 +86,7 @@ export default function AddHabitModal({ onClose, onCreated }) {
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="text-[#8FB6AF] hover:text-[#1F3B3B] hover:bg-[#E4F5EF] rounded-full p-1.5 -mr-1.5 -mt-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FC3A1]"
+            className="text-[#8FB9A8] hover:text-[#16302B] hover:bg-[#E7F4ED] rounded-full p-1.5 -mr-1.5 -mt-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F7D5C]"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M2 2L14 14M14 2L2 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
@@ -97,7 +97,7 @@ export default function AddHabitModal({ onClose, onCreated }) {
         {error && (
           <p
             role="alert"
-            className="flex items-center gap-2 text-[#B5533A] bg-[#FCEEE8] border border-[#F3D9CB] rounded-xl px-3 py-2 text-[13px] mb-5"
+            className="flex items-center gap-2 text-rose-700 bg-rose-50 border border-rose-100 rounded-xl px-3 py-2 text-[13px] mb-5"
           >
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="shrink-0">
               <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.3" />
@@ -110,10 +110,10 @@ export default function AddHabitModal({ onClose, onCreated }) {
         {/* Name + live preview */}
         <div className="mb-5">
           <div className="flex items-center justify-between mb-1.5">
-            <label htmlFor="habit-name" className="text-[13px] text-[#5E8C86]">
+            <label htmlFor="habit-name" className="text-[13px] text-[#5E8C7E]">
               Name
             </label>
-            <span className="text-[11px] text-[#9BC2BC] tabular-nums">
+            <span className="text-[11px] text-[#9BC2AE] tabular-nums">
               {name.length}/{NAME_LIMIT}
             </span>
           </div>
@@ -125,7 +125,7 @@ export default function AddHabitModal({ onClose, onCreated }) {
             maxLength={NAME_LIMIT}
             onChange={(e) => setName(e.target.value)}
             placeholder="e.g. Drink water"
-            className="w-full border border-[#D8EEE6] bg-white rounded-xl px-3 py-2.5 text-[14px] text-[#1F3B3B] placeholder:text-[#A9C7C2] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FC3A1] focus-visible:border-transparent transition-shadow"
+            className="w-full border border-[#CFE8DA] bg-white rounded-xl px-3 py-2.5 text-[14px] text-[#16302B] placeholder:text-[#A6C7BA] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F7D5C] focus-visible:border-transparent transition-shadow"
             required
           />
 
@@ -138,18 +138,18 @@ export default function AddHabitModal({ onClose, onCreated }) {
               className="text-[14px] truncate"
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                color: name ? "#1F3B3B" : "#A9C7C2",
+                color: name ? "#16302B" : "#A6C7BA",
                 fontStyle: name ? "normal" : "italic",
               }}
             >
-              {name || "Your habit will look like this"}
+              {name || "Set a habit name to preview"}
             </span>
           </div>
         </div>
 
         {/* Color */}
         <div className="mb-5">
-          <span className="text-[13px] text-[#5E8C86] block mb-2">Color</span>
+          <span className="text-[13px] text-[#5E8C7E] block mb-2">Color</span>
           <div className="flex gap-2.5" role="radiogroup" aria-label="Habit color">
             {COLORS.map((c) => {
               const selected = color === c.value;
@@ -161,12 +161,12 @@ export default function AddHabitModal({ onClose, onCreated }) {
                   aria-checked={selected}
                   aria-label={c.name}
                   onClick={() => setColor(c.value)}
-                  className="w-8 h-8 rounded-full grid place-items-center transition-transform duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#F6FBF8] focus-visible:ring-[#4FC3A1]"
+                  className="w-8 h-8 rounded-full grid place-items-center transition-transform duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:ring-[#2F7D5C]"
                   style={{
                     backgroundColor: c.value,
                     transform: selected ? "scale(1.08)" : "scale(1)",
                     boxShadow: selected
-                      ? "0 0 0 2px #F6FBF8, 0 0 0 3.5px " + c.value
+                      ? "0 0 0 2px #ffffff, 0 0 0 3.5px " + c.value
                       : "none",
                   }}
                 >
@@ -190,8 +190,8 @@ export default function AddHabitModal({ onClose, onCreated }) {
         {/* Reminder */}
         <div className="mb-7">
           <div className="flex items-center justify-between">
-            <label htmlFor="habit-reminder-toggle" className="text-[13px] text-[#5E8C86]">
-              Daily reminder
+            <label htmlFor="habit-reminder-toggle" className="text-[13px] text-[#5E8C7E]">
+          Set an email reminder
             </label>
             <button
               type="button"
@@ -199,8 +199,8 @@ export default function AddHabitModal({ onClose, onCreated }) {
               role="switch"
               aria-checked={reminderOn}
               onClick={() => setReminderOn((v) => !v)}
-              className="relative w-9 h-5 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#F6FBF8] focus-visible:ring-[#4FC3A1]"
-              style={{ backgroundColor: reminderOn ? "#4FC3A1" : "#D8EEE6" }}
+              className="relative w-9 h-5 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:ring-[#2F7D5C]"
+              style={{ backgroundColor: reminderOn ? "#2F7D5C" : "#CFE8DA" }}
             >
               <span
                 className="absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full shadow-sm transition-transform duration-150"
@@ -215,7 +215,7 @@ export default function AddHabitModal({ onClose, onCreated }) {
               type="time"
               value={reminderTime}
               onChange={(e) => setReminderTime(e.target.value)}
-              className="w-full border border-[#D8EEE6] bg-white rounded-xl px-3 py-2.5 text-[14px] text-[#1F3B3B] mt-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FC3A1] focus-visible:border-transparent"
+              className="w-full border border-[#CFE8DA] bg-white rounded-xl px-3 py-2.5 text-[14px] text-[#16302B] mt-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F7D5C] focus-visible:border-transparent"
             />
           )}
         </div>
@@ -225,14 +225,14 @@ export default function AddHabitModal({ onClose, onCreated }) {
           <button
             type="button"
             onClick={onClose}
-            className="flex-1 text-[#5E8C86] text-[14px] py-2.5 rounded-xl hover:bg-[#E4F5EF] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FC3A1]"
+            className="flex-1 text-[#5E8C7E] text-[14px] py-2.5 rounded-xl hover:bg-[#E7F4ED] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F7D5C]"
           >
             Cancel
           </button>
           <button
             type="submit"
             disabled={loading || !name.trim()}
-            className="flex-[1.4] bg-[#3AAE8D] text-white text-[14px] py-2.5 rounded-full hover:bg-[#34A084] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FC3A1] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F6FBF8]"
+            className="flex-[1.4] bg-[#2F7D5C] text-white text-[14px] py-2.5 rounded-full hover:bg-[#24634A] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F7D5C] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
             {loading ? (
               <>

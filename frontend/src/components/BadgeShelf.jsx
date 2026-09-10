@@ -1,4 +1,3 @@
-
 const BADGES = [
   { days: 3, label: "Getting Started" },
   { days: 7, label: "Week Warrior" },
@@ -16,10 +15,10 @@ export default function BadgeShelf({ streak }) {
           <span
             key={badge.days}
             title={`${badge.days}-day streak`}
-            className={`text-xs px-2.5 py-1 rounded-full border ${
+            className={`text-xs px-2.5 py-1 rounded-full border font-medium ${
               earned
-                ? "border-[#F5D76E] bg-[#F5D76E] text-[#5C4A00]"
-                : "border-[#CDEEE3] text-[#9BC2BC]"
+                ? "border-[#2F7D5C] bg-[#2F7D5C] text-white"
+                : "border-[#CFE8DA] text-[#9BC2AE]"
             }`}
           >
             {badge.label}

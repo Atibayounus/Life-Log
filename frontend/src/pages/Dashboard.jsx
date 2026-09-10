@@ -37,32 +37,57 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F4FAF9]">
+    <div className="min-h-screen bg-[#F3F8F4]">
       <Navbar />
-      <div className="max-w-2xl mx-auto p-6">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-base font-semibold text-[#1F3B3B]">Your Life Goals</h2>
+      <div className="max-w-2xl mx-auto px-6 py-10">
+        <div className="flex justify-between items-end mb-8 border-b border-[#CFE8DA] pb-5">
+          <div>
+            <h2 className="font-serif text-2xl text-[#16302B] tracking-tight">
+              Your Life Goals
+            </h2>
+            {!loading && habits.length > 0 && (
+              <p className="text-sm text-[#5E8C7E] mt-1">
+                {habits.length} habit{habits.length > 1 ? "s" : ""} tracked
+              </p>
+            )}
+          </div>
           <button
             onClick={() => setShowModal(true)}
-            className="bg-[#4FC3A1] text-white text-sm px-4 py-2 rounded-md hover:bg-[#3AAE8D] transition-colors"
+            className="inline-flex items-center gap-1.5 bg-[#2F7D5C] text-white text-sm font-medium px-4 py-2.5 rounded-lg shadow-sm hover:bg-[#24634A] active:scale-[0.98] transition-all"
           >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
             Add habit
           </button>
         </div>
 
-        {loading && <p className="text-sm text-[#5E8C86]">Loading...</p>}
+        {loading && (
+          <div className="space-y-3">
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className="h-16 rounded-xl bg-[#E7F4ED] animate-pulse"
+                style={{ animationDelay: `${i * 100}ms` }}
+              />
+            ))}
+          </div>
+        )}
+
         {error && (
-          <p className="text-sm text-rose-500 bg-rose-50 border border-rose-100 rounded-md px-3 py-2">
+          <p className="text-sm text-rose-700 bg-rose-50 border border-rose-100 rounded-lg px-3 py-2.5">
             {error}
           </p>
         )}
 
-        {!loading && habits.length === 0 && (
-          <div className="text-center py-16 border border-dashed border-[#CDEEE3] rounded-2xl bg-[#EAFBF5]">
-            <p className="text-sm text-[#5E8C86]">No habits yet.</p>
+        {!loading && !error && habits.length === 0 && (
+          <div className="text-center py-16 border border-dashed border-[#B7D8C4] rounded-2xl bg-[#E7F4ED]">
+            <p className="text-sm text-[#3F6355]">
+              No habits yet — start with something small.
+            </p>
             <button
               onClick={() => setShowModal(true)}
-              className="text-sm text-[#3AAE8D] font-medium hover:underline mt-1"
+              className="text-sm text-[#2F7D5C] font-semibold hover:text-[#24634A] hover:underline mt-2"
             >
               Add your first one
             </button>
