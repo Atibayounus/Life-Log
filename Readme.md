@@ -16,6 +16,22 @@
   <strong>“Small steps, kept daily.”</strong>
 </p>
 
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center"><img src="sshots/0.png" width="260"/><br/><sub>Login</sub></td>
+    <td align="center"><img src="sshots/1.png" width="260"/><br/><sub>Register</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="sshots/2.png" width="260"/><br/><sub>Dashboard</sub></td>
+    <td align="center"><img src="sshots/3.png" width="260"/><br/><sub>Add habit</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="sshots/4.png" width="260"/><br/><sub>Habit check-in</sub></td>
+    <td align="center"><img src="sshots/5.png" width="260"/><br/><sub>Badges</sub></td>
+  </tr>
+</table>
 
 
 ## ✨ Features
@@ -168,4 +184,4 @@ This project is open source and available under the **MIT License**.
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4CAF50,100:FDD835&height=170&section=footer" width="100%">
-</p>>
+</p>
