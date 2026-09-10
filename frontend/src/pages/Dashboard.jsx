@@ -1,3 +1,4 @@
+// Dashboard.jsx
 import { useEffect, useState } from "react";
 import api from "../api/axios.js";
 import Navbar from "../components/Navbar.jsx";
@@ -36,32 +37,32 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFF0F6]">
+    <div className="min-h-screen bg-[#F4FAF9]">
       <Navbar />
       <div className="max-w-2xl mx-auto p-6">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-base font-semibold text-pink-900">Your habits</h2>
+          <h2 className="text-base font-semibold text-[#1F3B3B]">Your Life Goals</h2>
           <button
             onClick={() => setShowModal(true)}
-            className="bg-[#F8B4D9] text-pink-900 text-sm px-4 py-2 rounded-md hover:bg-[#F5A0CC] transition-colors"
+            className="bg-[#4FC3A1] text-white text-sm px-4 py-2 rounded-md hover:bg-[#3AAE8D] transition-colors"
           >
             Add habit
           </button>
         </div>
 
-        {loading && <p className="text-sm text-pink-400">Loading...</p>}
+        {loading && <p className="text-sm text-[#5E8C86]">Loading...</p>}
         {error && (
-          <p className="text-sm text-rose-400 bg-rose-50 rounded-md px-3 py-2">
+          <p className="text-sm text-rose-500 bg-rose-50 border border-rose-100 rounded-md px-3 py-2">
             {error}
           </p>
         )}
 
         {!loading && habits.length === 0 && (
-          <div className="text-center py-16 border border-dashed border-pink-200 rounded-2xl bg-[#FFF6FA]">
-            <p className="text-sm text-pink-400">No habits yet.</p>
+          <div className="text-center py-16 border border-dashed border-[#CDEEE3] rounded-2xl bg-[#EAFBF5]">
+            <p className="text-sm text-[#5E8C86]">No habits yet.</p>
             <button
               onClick={() => setShowModal(true)}
-              className="text-sm text-pink-600 font-medium hover:underline mt-1"
+              className="text-sm text-[#3AAE8D] font-medium hover:underline mt-1"
             >
               Add your first one
             </button>

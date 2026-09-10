@@ -1,3 +1,4 @@
+// HabitCard.jsx
 import { useState } from "react";
 import api from "../api/axios.js";
 import BadgeShelf from "./BadgeShelf.jsx";
@@ -24,16 +25,16 @@ export default function HabitCard({ habit, onUpdate }) {
   };
 
   return (
-    <div className="bg-[#FFF6FA] rounded-2xl border border-pink-100 p-5 shadow-sm">
+    <div className="bg-[#EAFBF5] rounded-2xl border border-[#CDEEE3] p-5 shadow-sm">
       <div className="flex justify-between items-start gap-4">
         <div className="flex items-center gap-3">
           <span
             className="w-2.5 h-2.5 rounded-full mt-1 flex-shrink-0"
-            style={{ backgroundColor: habit.color || "#F8B4D9" }}
+            style={{ backgroundColor: habit.color || "#4FC3A1" }}
           />
           <div>
-            <h3 className="font-medium text-pink-900">{habit.name}</h3>
-            <p className="text-sm text-pink-400 mt-0.5">
+            <h3 className="font-medium text-[#1F3B3B]">{habit.name}</h3>
+            <p className="text-sm text-[#5E8C86] mt-0.5">
               {habit.streak || 0}-day streak &middot; {habit.points || 0} points
             </p>
           </div>
@@ -43,15 +44,15 @@ export default function HabitCard({ habit, onUpdate }) {
           disabled={alreadyCheckedInToday || loading}
           className={`text-sm px-4 py-2 rounded-md font-medium whitespace-nowrap transition-colors ${
             alreadyCheckedInToday
-              ? "bg-pink-50 text-pink-300 cursor-not-allowed"
-              : "bg-[#F8B4D9] text-pink-900 hover:bg-[#F5A0CC]"
+              ? "bg-white text-[#9BC2BC] cursor-not-allowed"
+              : "bg-[#4FC3A1] text-white hover:bg-[#3AAE8D]"
           }`}
         >
           {alreadyCheckedInToday ? "Checked in" : loading ? "Saving..." : "Check in"}
         </button>
       </div>
       {error && (
-        <p className="text-rose-400 bg-rose-50 rounded-md px-3 py-2 text-xs mt-2">
+        <p className="text-rose-500 bg-rose-50 border border-rose-100 rounded-md px-3 py-2 text-xs mt-2">
           {error}
         </p>
       )}

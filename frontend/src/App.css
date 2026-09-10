@@ -1,11 +1,11 @@
 :root {
-  --accent: #DB2777;
-  --accent-bg: #FBEAF2;
-  --accent-border: #F5A0CC;
-  --border: #FBCFE8;
-  --text-h: #831843;
-  --social-bg: #FDF2F8;
-  --shadow: 0 4px 12px rgba(216, 70, 140, 0.15);
+  --accent: #E8B8C6;
+  --accent-bg: #1A0C0F;
+  --accent-border: #690E3A;
+  --border: #3A1620;
+  --text-h: #F0D8DE;
+  --social-bg: #180B0E;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .counter {
