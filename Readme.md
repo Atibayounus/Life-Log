@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4CAF50,100:FDD835&height=120&section=header" width="100%">
-</p>>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4CAF50,100:FDD835&height=170&section=header" width="100%">
+</p>
 
 <h1 align="center">Life Log</h1>
 
@@ -16,7 +16,7 @@
   <strong>“Small steps, kept daily.”</strong>
 </p>
 
----
+
 
 ## ✨ Features
 
@@ -166,9 +166,6 @@ Backend:  http://localhost:5000
 
 This project is open source and available under the **MIT License**.
 
----
-
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF00E5,100:00F0FF&height=120&section=footer" width="100%">
-</p>
-```
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4CAF50,100:FDD835&height=170&section=footer" width="100%">
+</p>>
