@@ -1,4 +1,4 @@
-// HabitCard.jsx
+
 import { useState } from "react";
 import api from "../api/axios.js";
 import BadgeShelf from "./BadgeShelf.jsx";
