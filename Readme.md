@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4CAF50,100:FDD835&height=200&section=header&text=Life%20Log&fontSize=60&fontColor=ffffff&fontAlignY=40&animation=fadeIn&desc=Small%20steps,%20kept%20daily.&descAlignY=60&descSize=18&descColor=ffffff" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A1F44,100:2EC4B6&height=200&section=header&text=Life%20Log&fontSize=60&fontColor=ffffff&fontAlignY=40&animation=fadeIn&desc=Small%20steps,%20kept%20daily.&descAlignY=60&descSize=18&descColor=ffffff" width="100%">
 </p>
 
 
@@ -190,5 +190,5 @@ Backend:  http://localhost:5000
 This project is open source and available under the **MIT License**.
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4CAF50,100:FDD835&height=170&section=footer" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A1F44,100:2EC4B6&height=170&section=footer" width="100%">
 </p>
