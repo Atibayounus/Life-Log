@@ -1,17 +1,24 @@
-import axios from "axios";
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import connectDB from "./config/db.js";
+import authRoutes from "./routes/authRoutes.js";
+import habitRoutes from "./routes/habitRoutes.js";
 
-const api = axios.create({
-  baseURL: "https://life-log-8tmc-navg3p1y8-atiba-s-projects.vercel.app/api",
+dotenv.config();
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+app.use("/api/auth", authRoutes);
+app.use("/api/habits", habitRoutes);
+
+app.get("/", (req, res) => {
+  res.send("Habit Tracker API is running");
 });
 
-api.interceptors.request.use((config) => {
-  const user = JSON.parse(localStorage.getItem("habitUser"));
+connectDB();
 
-  if (user?.token) {
-    config.headers.Authorization = `Bearer ${user.token}`;
-  }
-
-  return config;
-});
-
-export default api;
+export default app;
