@@ -16,7 +16,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/habits", habitRoutes);
 
 app.get("/", (req, res) => {
-  res.send("life log API is running");
+  res.send("Habit Tracker API is running");
 });
 
 connectDB();
