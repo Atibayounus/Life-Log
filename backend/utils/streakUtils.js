@@ -1,4 +1,5 @@
 // Calculates the new streak based on the last check-in date and today's date
+
 export const calculateStreak = (lastCheckIn, currentStreak) => {
   if (!lastCheckIn) {
     // first ever check-in

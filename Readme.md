@@ -188,7 +188,3 @@ Backend:  http://localhost:5000
 ## 📄 License
 
 This project is open source and available under the **MIT License**.
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A1F44,100:2EC4B6&height=170&section=footer" width="100%">
-</p>
