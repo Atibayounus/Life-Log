@@ -180,7 +180,6 @@ Backend:  http://localhost:5000
 * [ ] Habit streaks
 * [ ] Habit history view
 * [ ] Reminders & notifications
-* [ ] Dark/light theme toggle
 * [ ] Improved progress analytics
 
 ---
